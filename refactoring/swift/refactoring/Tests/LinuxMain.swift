@@ -1,6 +1,7 @@
-import XCTest
+import Quick
 @testable import RefactoringTests
 
-XCTMain([
-    testCase(RefactoringTests.allTests),
+Quick.QCKMain([
+    PasswordVerifierSpec.self
     ])
+

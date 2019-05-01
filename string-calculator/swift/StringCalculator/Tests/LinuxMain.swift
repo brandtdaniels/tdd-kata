@@ -1,6 +1,6 @@
-import XCTest
+import Quick
 @testable import StringCalculatorTests
 
-XCTMain([
-    testCase(StringCalculatorTests.allTests),
+Quick.QCKMain([
+    StringCalculatorSpec.self
     ])
