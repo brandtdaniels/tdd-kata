@@ -1,4 +1,4 @@
-// swift-tools-version:4.0
+// swift-tools-version: 5.8
 
 import PackageDescription
 
@@ -6,22 +6,19 @@ let package = Package(
     name: "Interactions",
     products: [
         .executable(name: "scalc",
-                    targets: ["Scalc"])
+                    targets: ["SCalc"])
     ],
     dependencies: [
-        .package(url: "../../../string-calculator/swift/StringCalculator",
-                 from: "1.0.0"),
-        .package(url: "https://github.com/Quick/Quick.git",
-                 from: "1.2.0"),
-        .package(url: "https://github.com/Quick/Nimble.git",
-                 from: "7.0.3")
+        .package(path: "../../../string-calculator/swift/StringCalculator"),
+        .package(url: "https://github.com/Quick/Quick.git", from: "6.1.0"),
+        .package(url: "https://github.com/Quick/Nimble.git", from: "12.2.0")
     ],
     targets: [
         .target(
             name: "LoggingCalculator",
             dependencies: ["StringCalculator"]),
-        .target(
-            name: "Scalc",
+        .executableTarget(
+            name: "SCalc",
             dependencies: ["LoggingCalculator"]),
         .testTarget(
             name: "LoggingCalculatorTests",
