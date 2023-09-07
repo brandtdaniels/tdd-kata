@@ -1,7 +1,6 @@
 import Foundation
 import Nimble
 import Quick
-import XCTest
 @testable import StringCalculator
 
 class StringCalculatorSpec: QuickSpec {
