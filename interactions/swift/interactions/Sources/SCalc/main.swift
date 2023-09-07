@@ -33,7 +33,7 @@ if arguments.count != 2 {
             
         case .negativeOperands(let message, let operands):
             
-            let list = operands.flatMap { String($0) }.joined(separator: ", ")
+            let list = operands.compactMap { String($0) }.joined(separator: ", ")
             
             print("\(message): \(list)")
             
