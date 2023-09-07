@@ -1,4 +1,4 @@
-// swift-tools-version:4.0
+// swift-tools-version: 5.8
 
 import PackageDescription
 
@@ -10,10 +10,8 @@ let package = Package(
             targets: ["Refactoring"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/Quick/Quick.git",
-                 from: "1.2.0"),
-        .package(url: "https://github.com/Quick/Nimble.git",
-                 from: "7.0.3")
+        .package(url: "https://github.com/Quick/Quick.git", from: "6.1.0"),
+        .package(url: "https://github.com/Quick/Nimble.git", from: "12.2.0")
     ],
     targets: [
         .target(
