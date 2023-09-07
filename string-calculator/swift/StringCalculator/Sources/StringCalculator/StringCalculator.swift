@@ -62,13 +62,13 @@ struct Input: CalculatorInput {
 
     var delimiters = ""
 
-    if let commaIndex = rawInput.index(of: ",") {
+    if let commaIndex = rawInput.firstIndex(of: ",") {
 
       delimiters.append(rawInput[commaIndex])
 
     }
 
-    if let newlineIndex = rawInput.index(of: "\n") {
+    if let newlineIndex = rawInput.firstIndex(of: "\n") {
 
       if rawInput.starts(with: "//") {
 
