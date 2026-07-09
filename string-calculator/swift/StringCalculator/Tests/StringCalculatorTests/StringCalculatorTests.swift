@@ -5,17 +5,9 @@ import Quick
 
 class StringCalculatorSpec: QuickSpec {
 
-  override func spec() {
+  override class func spec() {
 
     describe("A string calculator") {
-
-      var stringCalculator: StringCalculator!
-
-      beforeEach {
-
-        stringCalculator = StringCalculator()
-
-      }
 
       context("when adding") {
 
@@ -23,7 +15,7 @@ class StringCalculatorSpec: QuickSpec {
 
           it("should return 0 from \"\"") {
 
-            expect { try stringCalculator.add("") }.to(equal(0))
+            expect { try StringCalculator().add("") }.to(equal(0))
 
           }
 
@@ -33,7 +25,7 @@ class StringCalculatorSpec: QuickSpec {
 
           it("should return 1 from \"1\"") {
 
-            expect {try stringCalculator.add("1")}.to(equal(1))
+            expect {try StringCalculator().add("1")}.to(equal(1))
 
           }
 
@@ -43,7 +35,7 @@ class StringCalculatorSpec: QuickSpec {
 
           it("should return 3 from \"1,2\"") {
 
-            expect { try stringCalculator.add("1,2") }.to(equal(3))
+            expect { try StringCalculator().add("1,2") }.to(equal(3))
 
           }
 
@@ -53,7 +45,7 @@ class StringCalculatorSpec: QuickSpec {
 
           it("should return 45 from \"1,2,3,4,5,6,7,8,9\"") {
 
-            expect {try stringCalculator.add("1,2,3,4,5,6,7,8,9") }.to(equal(45))
+            expect {try StringCalculator().add("1,2,3,4,5,6,7,8,9") }.to(equal(45))
 
           }
 
@@ -63,7 +55,7 @@ class StringCalculatorSpec: QuickSpec {
 
           it("should return 3 from \"1\n3\"") {
 
-            expect { try stringCalculator.add("1\n2") }.to(equal(3))
+            expect { try StringCalculator().add("1\n2") }.to(equal(3))
 
           }
 
@@ -73,7 +65,7 @@ class StringCalculatorSpec: QuickSpec {
 
           it("should return 6 from \"1\n2,3\"") {
 
-            expect { try stringCalculator.add("1\n2,3") }.to(equal(6))
+            expect { try StringCalculator().add("1\n2,3") }.to(equal(6))
 
           }
 
@@ -83,7 +75,7 @@ class StringCalculatorSpec: QuickSpec {
 
           it("should return 3 from \"//;\\n1;2\"") {
 
-            expect { try stringCalculator.add("//;\n1;2") }.to(equal(3))
+            expect { try StringCalculator().add("//;\n1;2") }.to(equal(3))
 
           }
 
@@ -93,7 +85,7 @@ class StringCalculatorSpec: QuickSpec {
 
           it("should return an error message \"negatives not allowed\" with a list of negative numbers") {
 
-            expect { try stringCalculator.add("-1,1") }.to(throwError(StringCalculator.Exception.negativeOperands(message: "negatives not allowed", operands: [-1])))
+            expect { try StringCalculator().add("-1,1") }.to(throwError(StringCalculator.Exception.negativeOperands(message: "negatives not allowed", operands: [-1])))
 
           }
 

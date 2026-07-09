@@ -5,25 +5,17 @@ import StringCalculator
 
 class LoggingCalculatorSpec: QuickSpec {
     
-    override func spec() {
+    override class func spec() {
         
         describe("A logging calculator") {
 
-            var stringCalculator: StringCalculator!
-            
-            beforeEach {
-                
-                stringCalculator = StringCalculator()
-                
-            }
-            
             context("when adding") {
-                
+
                 it("should log the sum to a logger when adding") {
-                    
+
                     let stringLogger = MockStringLogger()
-                    
-                    let loggingCalculator = LoggingCalculator(stringCalculator, stringLogger)
+
+                    let loggingCalculator = LoggingCalculator(StringCalculator(), stringLogger)
   
                     _ = try! loggingCalculator.add("1")
                     
@@ -37,7 +29,7 @@ class LoggingCalculatorSpec: QuickSpec {
                     
                     let webService = MockWebService()
                     
-                    let webServiceCalculator = MockWebServiceLoggingCalculator(stringCalculator, logger, webService)
+                    let webServiceCalculator = MockWebServiceLoggingCalculator(StringCalculator(), logger, webService)
                     
                     _ = try! webServiceCalculator.add("1")
                     

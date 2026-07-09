@@ -4,7 +4,7 @@ import Quick
 
 class PasswordVerifierSpec: QuickSpec {
     
-    override func spec() {
+    override class func spec() {
         
         describe("A password verifier") {
             

@@ -10,8 +10,8 @@ let package = Package(
     ],
     dependencies: [
         .package(path: "../../../string-calculator/swift/StringCalculator"),
-        .package(url: "https://github.com/Quick/Quick.git", from: "6.1.0"),
-        .package(url: "https://github.com/Quick/Nimble.git", from: "12.2.0")
+        .package(url: "https://github.com/Quick/Quick.git", from: "7.6.2"),
+        .package(url: "https://github.com/Quick/Nimble.git", from: "14.0.0")
     ],
     targets: [
         .target(
