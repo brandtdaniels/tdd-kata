@@ -74,11 +74,4 @@ class GameOfLifeTests: XCTestCase {
         }
         
     }
-    
-    static var allTests = [
-        ("testAnyLiveCellWithFewerThanTwoLiveNeighborsDies", testAnyLiveCellWithFewerThanTwoLiveNeighborsDies),
-        ("testAnyLiveCellWithMoreThanThreeLiveNeighborsDies", testAnyLiveCellWithMoreThanThreeLiveNeighborsDies),
-        ("testAnyLiveCellWithTwoOrThreeLiveNeighborsLivesOn", testAnyLiveCellWithTwoOrThreeLiveNeighborsLivesOn),
-        ("testAnyDeadCellWithExactlyThreeLiveNeighborsBecomesALiveCell", testAnyDeadCellWithExactlyThreeLiveNeighborsBecomesALiveCell)
-    ]
 }
