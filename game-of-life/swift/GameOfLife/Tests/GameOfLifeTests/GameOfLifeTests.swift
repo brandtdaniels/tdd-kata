@@ -8,9 +8,4 @@ class GameOfLifeTests: XCTestCase {
         // results.
         XCTAssertEqual(GameOfLife().text, "Hello, World!")
     }
-
-
-    static var allTests = [
-        ("testExample", testExample),
-    ]
 }
